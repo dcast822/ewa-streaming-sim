@@ -1,3 +1,4 @@
 .venv
 *.duckdb
 __pycache__/
+dagster_project/.tmp_dagster_home_*/
