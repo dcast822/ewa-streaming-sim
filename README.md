@@ -2,11 +2,11 @@
 
 A real-time Earned Wage Access (EWA) pipeline simulation — synthetic payroll transactions flow through a Kafka-compatible stream, land in DuckDB, get transformed and tested with dbt, sync to a cloud warehouse, and power a live dashboard. Built to demonstrate streaming concepts, dbt depth, and the kind of judgment calls that come up when a plan meets real data.
 
-**[→ Try the live dashboard](https://your-app-name.streamlit.app)**
+**[→ Try the live dashboard](https://ewa-streaming-sim-nka3he2ekcqvdph4fv6p6r.streamlit.app/)**
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-name.streamlit.app)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ewa-streaming-sim-nka3he2ekcqvdph4fv6p6r.streamlit.app/)
 
-![EWA Dashboard](docs/dash_screenshot_1.png)
+![EWA Dashboard](docs/images/dash_screenshot_1.png)
 
 ---
 
@@ -63,6 +63,12 @@ The dashboard (synced from MotherDuck, refreshed every minute by the Dagster sch
 - **Employer Utilization** — advance utilization rate by employer
 - **Anomalies** — a live feed of flagged issues: duplicate transactions, late-arriving events, high-value transactions, over-cap advance requests, unmatched pay periods, and employees whose earnings exceed their period cap
 
+## dbt Lineage
+
+Full pipeline lineage from raw sources through staging, intermediate, and mart layers, generated with `dbt docs generate`:
+
+![dbt Lineage Graph](docs/images/dbt_lineage_graph.png)
+
 ## Engineering Decisions Worth Knowing About
 
 A few real problems came up during the build that shaped the final architecture — the kind of thing that's more interesting to talk through than a clean happy-path plan would be:
@@ -99,6 +105,11 @@ dagster dev -m ewa_dagster
 
 # 6. Dashboard (local)
 streamlit run dashboard/streamlit_app.py
+
+# 7. dbt docs (lineage graph)
+cd ../dbt_project
+dbt docs generate
+dbt docs serve
 ```
 
 ## Project Structure
@@ -116,5 +127,6 @@ ewa-streaming-sim/
 │   └── tests/            # Custom business-logic tests
 ├── dagster_project/      # Orchestration: drain → dbt run → dbt test → sync
 ├── dashboard/            # Streamlit app + MotherDuck sync script
+├── docs/images/          # README screenshots (dashboard, dbt lineage graph)
 └── docker-compose.yml    # Redpanda
 ```
