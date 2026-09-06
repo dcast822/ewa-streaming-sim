@@ -2,3 +2,6 @@
 *.duckdb
 __pycache__/
 dagster_project/.tmp_dagster_home_*/
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
