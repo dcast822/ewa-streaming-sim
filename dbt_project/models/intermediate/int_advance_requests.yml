@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: int_advance_requests
+    description: Advance requests matched to their employee's active pay period, with flags for requests exceeding max_earnings or falling outside any known pay period window.
+    columns:
+      - name: request_id
+        data_tests:
+          - unique
+          - not_null
+      - name: employee_id
+        data_tests:
+          - not_null
+      - name: requested_amount
+        data_tests:
+          - not_null
+      - name: no_matching_pay_period
+        data_tests:
+          - not_null
+      - name: exceeds_max_earnings
+        data_tests:
+          - not_null

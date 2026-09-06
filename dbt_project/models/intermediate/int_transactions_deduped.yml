@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: int_transactions_deduped
+    description: One row per transaction_id, keeping the most recently loaded copy. duplicate_flag marks transactions that arrived more than once in the raw stream.
+    columns:
+      - name: transaction_id
+        description: Unique identifier for the transaction event.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: employee_id
+        description: Employee who requested the wage access.
+        data_tests:
+          - not_null
+
+      - name: employer_id
+        description: Employer the employee is associated with.
+        data_tests:
+          - not_null
+
+      - name: amount
+        description: Dollar amount of the EWA transaction.
+        data_tests:
+          - not_null
+
+      - name: status
+        description: "Lifecycle state of the transaction: confirmed, pending, or reversed."
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['confirmed', 'pending', 'reversed']
+
+      - name: event_time
+        description: Timestamp the event occurred at the source/producer.
+        data_tests:
+          - not_null
+
+      - name: loaded_at
+        description: Timestamp the row was written into DuckDB by the consumer.
+        data_tests:
+          - not_null
+
+      - name: duplicate_flag
+        description: True if this transaction_id appeared more than once in raw_transactions (simulating at-least-once delivery from the streaming producer).
+        data_tests:
+          - not_null

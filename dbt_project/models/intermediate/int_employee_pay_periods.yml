@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_employee_pay_periods
+    description: Bi-weekly pay period windows per employee, generated from a daily date spine and bucketed into 14-day periods starting at each employee's pay_period_start.
+    columns:
+      - name: employee_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_employees')
+              field: employee_id
+      - name: employer_id
+        data_tests:
+          - not_null
+      - name: period_number
+        data_tests:
+          - not_null
+      - name: pay_period_start_date
+        data_tests:
+          - not_null
+      - name: pay_period_end_date
+        data_tests:
+          - not_null
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - employee_id
+            - period_number

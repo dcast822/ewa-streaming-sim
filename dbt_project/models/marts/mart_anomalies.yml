@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: mart_anomalies
+    description: Unified feed of flagged anomalies across the pipeline — duplicate deliveries, late-arriving events, high-value transactions, advance requests that exceed earnings caps or fall outside known pay periods, and employees whose confirmed earnings exceed their pay-period cap.
+    columns:
+      - name: anomaly_type
+        description: "One of: duplicate_transaction, late_arriving_transaction, high_value_transaction, over_cap_advance_request, unmatched_pay_period_advance_request, over_cap_earnings."
+        data_tests:
+          - not_null
+          - accepted_values:
+              values:
+                - duplicate_transaction
+                - late_arriving_transaction
+                - high_value_transaction
+                - over_cap_advance_request
+                - unmatched_pay_period_advance_request
+                - over_cap_earnings
+      - name: source_id
+        description: The transaction_id, request_id, or employee_id this anomaly refers to.
+        data_tests:
+          - not_null
+      - name: employee_id
+        data_tests:
+          - not_null
+      - name: amount
+        data_tests:
+          - not_null

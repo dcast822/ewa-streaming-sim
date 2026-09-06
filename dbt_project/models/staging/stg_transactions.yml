@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: Incrementally-loaded, lightly-typed EWA transaction events. May contain duplicate transaction_ids within a single load batch; uniqueness is enforced downstream in int_transactions_deduped.
+    columns:
+      - name: transaction_id
+        description: Unique identifier for the transaction event (not guaranteed unique at this layer).
+        data_tests:
+          - not_null
+
+      - name: employee_id
+        description: Employee who requested the wage access.
+        data_tests:
+          - not_null
+
+      - name: employer_id
+        description: Employer the employee is associated with.
+        data_tests:
+          - not_null
+
+      - name: amount
+        description: Dollar amount of the EWA transaction.
+        data_tests:
+          - not_null
+
+      - name: status
+        description: "Lifecycle state of the transaction: confirmed, pending, or reversed."
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['confirmed', 'pending', 'reversed']
+
+      - name: event_time
+        description: Timestamp the event occurred at the source/producer.
+        data_tests:
+          - not_null
+
+      - name: loaded_at
+        description: Timestamp the row was written into DuckDB by the consumer.
+        data_tests:
+          - not_null

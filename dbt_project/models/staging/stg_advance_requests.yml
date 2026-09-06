@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_advance_requests
+    description: Staged synthetic advance requests, one row per request.
+    columns:
+      - name: request_id
+        data_tests:
+          - unique
+          - not_null
+      - name: employee_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_employees')
+              field: employee_id
+      - name: employer_id
+        data_tests:
+          - not_null
+      - name: requested_amount
+        data_tests:
+          - not_null
+      - name: status
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['approved', 'pending', 'denied']
+      - name: request_time
+        data_tests:
+          - not_null
+      - name: loaded_at
+        data_tests:
+          - not_null

@@ -1,0 +1,42 @@
+[32m2026-09-05 21:10:51 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - 90343 - LOGS_CAPTURED - Capturing logs for process (pid: 90343).
+[32m2026-09-05 21:10:51 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - 90343 - dbt_run - STEP_START - Started execution of step "dbt_run".
+[32m2026-09-05 21:10:51 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - dbt_run - Loading file from: /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dagster_project/.tmp_dagster_home_w_tw59_1/storage/f5da4427-bc40-496d-87d7-b235a6a8b9e1/drain_kafka_to_duckdb/result using PickledObjectFilesystemIOManager...
+[32m2026-09-05 21:10:51 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - 90343 - dbt_run - LOADED_INPUT - Loaded input "drain_count" using input manager "io_manager", from output "result" of step "drain_kafka_to_duckdb"
+[32m2026-09-05 21:10:51 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - 90343 - dbt_run - STEP_INPUT - Got input "drain_count" of type "Int". (Type check passed).
+[32m2026-09-05 21:10:55 -0400[0m - dagster - [34mINFO[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - dbt_run - [0m01:10:53  Running with dbt=1.12.3
+[0m01:10:53  Registered adapter: duckdb=1.11.0
+[0m01:10:54  Found 10 models, 2 seeds, 71 data tests, 2 sources, 616 macros
+[0m01:10:54  
+[0m01:10:54  Concurrency: 1 threads (target='dev')
+[0m01:10:54  
+[0m01:10:54  1 of 10 START sql view model main.stg_advance_requests ......................... [RUN]
+[0m01:10:54  1 of 10 OK created sql view model main.stg_advance_requests .................... [[32mOK[0m in 0.06s]
+[0m01:10:54  2 of 10 START sql view model main.stg_employees ................................ [RUN]
+[0m01:10:54  2 of 10 OK created sql view model main.stg_employees ........................... [[32mOK[0m in 0.02s]
+[0m01:10:54  3 of 10 START sql view model main.stg_employers ................................ [RUN]
+[0m01:10:54  3 of 10 OK created sql view model main.stg_employers ........................... [[32mOK[0m in 0.02s]
+[0m01:10:54  4 of 10 START sql incremental model main.stg_transactions ...................... [RUN]
+[0m01:10:54  4 of 10 OK created sql incremental model main.stg_transactions ................. [[32mOK[0m in 0.12s]
+[0m01:10:54  5 of 10 START sql view model main.int_employee_pay_periods ..................... [RUN]
+[0m01:10:54  5 of 10 OK created sql view model main.int_employee_pay_periods ................ [[32mOK[0m in 0.05s]
+[0m01:10:54  6 of 10 START sql view model main.int_transactions_deduped ..................... [RUN]
+[0m01:10:54  6 of 10 OK created sql view model main.int_transactions_deduped ................ [[32mOK[0m in 0.03s]
+[0m01:10:54  7 of 10 START sql view model main.int_advance_requests ......................... [RUN]
+[0m01:10:54  7 of 10 OK created sql view model main.int_advance_requests .................... [[32mOK[0m in 0.02s]
+[0m01:10:54  8 of 10 START sql table model main.mart_employee_balances ...................... [RUN]
+[0m01:10:54  8 of 10 OK created sql table model main.mart_employee_balances ................. [[32mOK[0m in 0.08s]
+[0m01:10:54  9 of 10 START sql table model main.mart_anomalies .............................. [RUN]
+[0m01:10:54  9 of 10 OK created sql table model main.mart_anomalies ......................... [[32mOK[0m in 0.05s]
+[0m01:10:54  10 of 10 START sql table model main.mart_employer_utilization .................. [RUN]
+[0m01:10:54  10 of 10 OK created sql table model main.mart_employer_utilization ............. [[32mOK[0m in 0.02s]
+[0m01:10:54  
+[0m01:10:54  Finished running 1 incremental model, 3 table models, 6 view models in 0 hours 0 minutes and 0.59 seconds (0.59s).
+[0m01:10:54  
+[0m01:10:54  [32mCompleted successfully[0m
+[0m01:10:54  
+[0m01:10:54  Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=10
+
+[32m2026-09-05 21:10:55 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - 90343 - dbt_run - STEP_OUTPUT - Yielded output "result" of type "Int". (Type check passed).
+[32m2026-09-05 21:10:55 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - dbt_run - Writing file at: /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dagster_project/.tmp_dagster_home_w_tw59_1/storage/f5da4427-bc40-496d-87d7-b235a6a8b9e1/dbt_run/result using PickledObjectFilesystemIOManager...
+[32m2026-09-05 21:10:55 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - 90343 - dbt_run - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2026-09-05 21:10:55 -0400[0m - dagster - [34mDEBUG[0m - ewa_pipeline_job - f5da4427-bc40-496d-87d7-b235a6a8b9e1 - 90343 - dbt_run - STEP_SUCCESS - Finished execution of step "dbt_run" in 3.35s.

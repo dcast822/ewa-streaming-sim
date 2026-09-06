@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: raw_transactions
+        description: Raw EWA transaction events landed by the streaming consumer.
+        loaded_at_field: loaded_at
+        freshness:
+          warn_after: {count: 5, period: minute}
+          error_after: {count: 30, period: minute}
+
+      - name: raw_advance_requests
+        description: Raw synthetic advance requests, generated in a one-off batch (not streamed) since request volume is low-frequency by nature.

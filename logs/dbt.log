@@ -1,0 +1,218 @@
+[0m15:21:18.415642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe5dbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe80910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe81390>]}
+
+
+============================== 15:21:18.426847 | 1f5a9783-0c5c-40f2-9186-d891315626ba ==============================
+[0m15:21:18.426847 [info ] [MainThread]: Running with dbt=1.12.3
+[0m15:21:18.427573 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --select stg_ewa__transactions', 'indirect_selection': 'eager', 'debug': 'False', 'partial_parse': 'True', 'profiles_dir': '/Users/dcast822/.dbt', 'log_format': 'default', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'log_path': 'logs', 'printer_width': '80', 'maximum_seed_size_mib': '1', 'quiet': 'False'}
+[0m15:21:18.428329 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:21:18.437655 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.15550096, "process_in_blocks": "0", "process_kernel_time": 0.262449, "process_mem_max_rss": "118878208", "process_out_blocks": "0", "process_user_time": 1.146494}
+[0m15:21:18.438657 [debug] [MainThread]: Command `dbt run` failed at 15:21:18.438337 after 0.16 seconds
+[0m15:21:18.439391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a12a090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fca4550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fd77dd0>]}
+[0m15:21:18.439959 [debug] [MainThread]: Flushing usage events
+[0m15:21:18.692800 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:28:49.032731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11334fd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1133702d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113370dd0>]}
+
+
+============================== 15:28:49.037446 | c78e282f-864d-4c3d-86a2-695ef758d701 ==============================
+[0m15:28:49.037446 [info ] [MainThread]: Running with dbt=1.12.3
+[0m15:28:49.038633 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'debug': 'False', 'partial_parse': 'True', 'write_json': 'True', 'use_experimental_parser': 'False', 'maximum_seed_size_mib': '1', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'fail_fast': 'False', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'log_path': 'logs', 'log_cache_events': 'False', 'quiet': 'False', 'cache_selected_only': 'False', 'profiles_dir': '/Users/dcast822/.dbt', 'no_print': 'None', 'warn_error': 'None', 'hints_enabled': 'True'}
+[0m15:28:49.053881 [info ] [MainThread]: dbt version: 1.12.3
+[0m15:28:49.054454 [info ] [MainThread]: python version: 3.11.13
+[0m15:28:49.055186 [info ] [MainThread]: python path: /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/.venv/bin/python
+[0m15:28:49.055568 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m15:28:49.061409 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.redshift'
+[0m15:28:49.300683 [info ] [MainThread]: Using profiles dir at /Users/dcast822/.dbt
+[0m15:28:49.301136 [info ] [MainThread]: Using profiles.yml file at /Users/dcast822/.dbt/profiles.yml
+[0m15:28:49.301391 [info ] [MainThread]: Using dbt_project.yml file at /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml
+[0m15:28:49.301651 [info ] [MainThread]: Configuration:
+[0m15:28:49.301887 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m15:28:49.302108 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:28:49.302327 [info ] [MainThread]: Required dependencies:
+[0m15:28:49.302624 [debug] [MainThread]: Executing "git --help"
+[0m15:28:49.362014 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:28:49.362936 [debug] [MainThread]: STDERR: "b''"
+[0m15:28:49.363269 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:28:49.363592 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m15:28:49.363977 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m15:28:49.364232 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "kaiyo_dbt", target "dev" invalid: Runtime Error
+    Could not find adapter type redshift!
+
+
+[0m15:28:49.364494 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml> not found
+
+[0m15:28:49.367050 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.42579728, "process_in_blocks": "0", "process_kernel_time": 0.248885, "process_mem_max_rss": "134078464", "process_out_blocks": "0", "process_user_time": 1.234945}
+[0m15:28:49.367685 [debug] [MainThread]: Command `dbt debug` failed at 15:28:49.367458 after 0.43 seconds
+[0m15:28:49.368148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11334fe50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113437b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113468a10>]}
+[0m15:28:49.368625 [debug] [MainThread]: Flushing usage events
+[0m15:28:49.671600 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:30:46.427065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c171c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fd65590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe1c090>]}
+
+
+============================== 15:30:46.432115 | 1a08abaa-0f38-46c1-a06a-eb1399478cc9 ==============================
+[0m15:30:46.432115 [info ] [MainThread]: Running with dbt=1.12.3
+[0m15:30:46.432693 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'cache_selected_only': 'False', 'profiles_dir': '/Users/dcast822/.dbt', 'warn_error': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'hints_enabled': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'invocation_command': 'dbt debug', 'quiet': 'False', 'log_path': 'logs', 'use_experimental_parser': 'False', 'empty': 'None', 'target_path': 'None', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'fail_fast': 'False', 'write_json': 'True', 'static_parser': 'True'}
+[0m15:30:46.447178 [info ] [MainThread]: dbt version: 1.12.3
+[0m15:30:46.447583 [info ] [MainThread]: python version: 3.11.13
+[0m15:30:46.447882 [info ] [MainThread]: python path: /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/.venv/bin/python
+[0m15:30:46.448152 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m15:30:46.691221 [info ] [MainThread]: Using profiles dir at /Users/dcast822/.dbt
+[0m15:30:46.691705 [info ] [MainThread]: Using profiles.yml file at /Users/dcast822/.dbt/profiles.yml
+[0m15:30:46.691964 [info ] [MainThread]: Using dbt_project.yml file at /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml
+[0m15:30:46.695117 [info ] [MainThread]: adapter type: duckdb
+[0m15:30:46.695599 [info ] [MainThread]: adapter version: 1.11.0
+[0m15:30:46.695870 [info ] [MainThread]: Configuration:
+[0m15:30:46.696206 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:30:46.696516 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:30:46.696749 [info ] [MainThread]: Required dependencies:
+[0m15:30:46.697062 [debug] [MainThread]: Executing "git --help"
+[0m15:30:46.730416 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:30:46.731283 [debug] [MainThread]: STDERR: "b''"
+[0m15:30:46.731597 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:30:46.731891 [info ] [MainThread]: Connection:
+[0m15:30:46.732244 [info ] [MainThread]:   database: ewa
+[0m15:30:46.732480 [info ] [MainThread]:   schema: main
+[0m15:30:46.732725 [info ] [MainThread]:   path: /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/ewa.duckdb
+[0m15:30:46.732955 [info ] [MainThread]:   config_options: None
+[0m15:30:46.733176 [info ] [MainThread]:   extensions: None
+[0m15:30:46.733517 [info ] [MainThread]:   settings: {}
+[0m15:30:46.733800 [info ] [MainThread]:   external_root: .
+[0m15:30:46.734053 [info ] [MainThread]:   use_credential_provider: None
+[0m15:30:46.734285 [info ] [MainThread]:   attach: None
+[0m15:30:46.734511 [info ] [MainThread]:   filesystems: None
+[0m15:30:46.734730 [info ] [MainThread]:   remote: None
+[0m15:30:46.734948 [info ] [MainThread]:   plugins: None
+[0m15:30:46.735175 [info ] [MainThread]:   disable_transactions: False
+[0m15:30:46.735693 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m15:30:46.842286 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m15:30:46.873824 [debug] [MainThread]: Using duckdb connection "debug"
+[0m15:30:46.874193 [debug] [MainThread]: On debug: select 1 as id
+[0m15:30:46.874443 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:30:46.913010 [debug] [MainThread]: SQL status: OK in 0.038 seconds
+[0m15:30:46.914152 [debug] [MainThread]: On debug: Close
+[0m15:30:46.914489 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:30:46.914780 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:30:46.915027 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml> not found
+
+[0m15:30:46.917253 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.5764574, "process_in_blocks": "0", "process_kernel_time": 0.293024, "process_mem_max_rss": "144625664", "process_out_blocks": "0", "process_user_time": 1.273585}
+[0m15:30:46.917710 [debug] [MainThread]: Command `dbt debug` failed at 15:30:46.917628 after 0.58 seconds
+[0m15:30:46.918688 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:30:46.919042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe20790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff07890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100b1750>]}
+[0m15:30:46.919449 [debug] [MainThread]: Flushing usage events
+[0m15:30:47.207280 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:31:12.161368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11137d690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1113b0150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1113b5110>]}
+
+
+============================== 15:31:12.166064 | 1cd247a1-2910-4c9e-9e8f-216d6104bf0d ==============================
+[0m15:31:12.166064 [info ] [MainThread]: Running with dbt=1.12.3
+[0m15:31:12.166655 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'fail_fast': 'False', 'warn_error': 'None', 'log_format': 'default', 'no_print': 'None', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'version_check': 'True', 'profiles_dir': '/Users/dcast822/.dbt', 'hints_enabled': 'True', 'cache_selected_only': 'False', 'log_path': 'logs', 'printer_width': '80', 'target_path': 'None', 'quiet': 'False', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'introspect': 'True', 'empty': 'None', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'use_colors': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m15:31:12.184172 [info ] [MainThread]: dbt version: 1.12.3
+[0m15:31:12.184628 [info ] [MainThread]: python version: 3.11.13
+[0m15:31:12.184930 [info ] [MainThread]: python path: /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/.venv/bin/python
+[0m15:31:12.185207 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m15:31:12.427814 [info ] [MainThread]: Using profiles dir at /Users/dcast822/.dbt
+[0m15:31:12.428294 [info ] [MainThread]: Using profiles.yml file at /Users/dcast822/.dbt/profiles.yml
+[0m15:31:12.428557 [info ] [MainThread]: Using dbt_project.yml file at /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml
+[0m15:31:12.430657 [info ] [MainThread]: adapter type: duckdb
+[0m15:31:12.430947 [info ] [MainThread]: adapter version: 1.11.0
+[0m15:31:12.431202 [info ] [MainThread]: Configuration:
+[0m15:31:12.431430 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:31:12.431650 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:31:12.431879 [info ] [MainThread]: Required dependencies:
+[0m15:31:12.432166 [debug] [MainThread]: Executing "git --help"
+[0m15:31:12.468760 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:31:12.469640 [debug] [MainThread]: STDERR: "b''"
+[0m15:31:12.469982 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:31:12.470279 [info ] [MainThread]: Connection:
+[0m15:31:12.470586 [info ] [MainThread]:   database: ewa
+[0m15:31:12.470817 [info ] [MainThread]:   schema: main
+[0m15:31:12.471071 [info ] [MainThread]:   path: /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/ewa.duckdb
+[0m15:31:12.471309 [info ] [MainThread]:   config_options: None
+[0m15:31:12.471548 [info ] [MainThread]:   extensions: None
+[0m15:31:12.471774 [info ] [MainThread]:   settings: {}
+[0m15:31:12.472008 [info ] [MainThread]:   external_root: .
+[0m15:31:12.472230 [info ] [MainThread]:   use_credential_provider: None
+[0m15:31:12.472449 [info ] [MainThread]:   attach: None
+[0m15:31:12.472671 [info ] [MainThread]:   filesystems: None
+[0m15:31:12.472888 [info ] [MainThread]:   remote: None
+[0m15:31:12.473103 [info ] [MainThread]:   plugins: None
+[0m15:31:12.473321 [info ] [MainThread]:   disable_transactions: False
+[0m15:31:12.473865 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m15:31:12.582225 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m15:31:12.617272 [debug] [MainThread]: Using duckdb connection "debug"
+[0m15:31:12.618251 [debug] [MainThread]: On debug: select 1 as id
+[0m15:31:12.618782 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:31:12.664625 [debug] [MainThread]: SQL status: OK in 0.045 seconds
+[0m15:31:12.666009 [debug] [MainThread]: On debug: Close
+[0m15:31:12.666520 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:31:12.666870 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:31:12.667126 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml> not found
+
+[0m15:31:12.669397 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.6043843, "process_in_blocks": "0", "process_kernel_time": 0.354045, "process_mem_max_rss": "142684160", "process_out_blocks": "0", "process_user_time": 1.391186}
+[0m15:31:12.669852 [debug] [MainThread]: Command `dbt debug` failed at 15:31:12.669767 after 0.60 seconds
+[0m15:31:12.670861 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:31:12.671215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111254e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111a0d5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111478a50>]}
+[0m15:31:12.671614 [debug] [MainThread]: Flushing usage events
+[0m15:31:12.789421 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:36:28.480191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113f72150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113f94690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113f95090>]}
+
+
+============================== 17:36:28.488163 | 2a4dc350-6804-43c7-bc27-e70cc05772c6 ==============================
+[0m17:36:28.488163 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:36:28.488844 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'introspect': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'warn_error': 'None', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run --select stg_ewa__transactions', 'quiet': 'False', 'debug': 'False', 'log_format': 'default', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'profiles_dir': '/Users/dcast822/.dbt', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'maximum_seed_size_mib': '1', 'use_experimental_parser': 'False', 'write_json': 'True', 'fail_fast': 'False', 'static_parser': 'True'}
+[0m17:36:28.489580 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:36:28.499579 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.12563509, "process_in_blocks": "0", "process_kernel_time": 0.267029, "process_mem_max_rss": "118657024", "process_out_blocks": "0", "process_user_time": 1.172231}
+[0m17:36:28.500606 [debug] [MainThread]: Command `dbt run` failed at 17:36:28.500201 after 0.13 seconds
+[0m17:36:28.501163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e326090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113f93190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113e8bfd0>]}
+[0m17:36:28.501591 [debug] [MainThread]: Flushing usage events
+[0m17:36:28.692999 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:36:30.353398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d31e690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fd8b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fd9350>]}
+
+
+============================== 17:36:30.365478 | 02028263-7610-4f73-88e8-bbb9b011a521 ==============================
+[0m17:36:30.365478 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:36:30.366838 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'write_json': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'partial_parse': 'True', 'log_cache_events': 'False', 'profiles_dir': '/Users/dcast822/.dbt', 'no_print': 'None', 'use_colors': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'empty': 'None', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'hints_enabled': 'True', 'printer_width': '80', 'warn_error': 'None', 'invocation_command': 'dbt test --select stg_ewa__transactions', 'log_format': 'default', 'quiet': 'False', 'target_path': 'None', 'version_check': 'True', 'static_parser': 'True'}
+[0m17:36:30.367747 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:36:30.371342 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.1413532, "process_in_blocks": "0", "process_kernel_time": 0.180986, "process_mem_max_rss": "119619584", "process_out_blocks": "0", "process_user_time": 1.156279}
+[0m17:36:30.373905 [debug] [MainThread]: Command `dbt test` failed at 17:36:30.372848 after 0.14 seconds
+[0m17:36:30.375531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b32a110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110ddd810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110ed3bd0>]}
+[0m17:36:30.376388 [debug] [MainThread]: Flushing usage events
+[0m17:36:30.539090 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:16:20.740218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf00710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f9dfad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fbc2c10>]}
+
+
+============================== 20:16:20.746297 | f489bf96-82f8-4430-8871-dcd5c1f44df3 ==============================
+[0m20:16:20.746297 [info ] [MainThread]: Running with dbt=1.12.3
+[0m20:16:20.746828 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'profiles_dir': '/Users/dcast822/.dbt', 'debug': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'no_print': 'None', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'version_check': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'printer_width': '80', 'log_format': 'default', 'cache_selected_only': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt test', 'maximum_seed_size_mib': '1', 'warn_error': 'None', 'log_path': 'logs'}
+[0m20:16:20.747448 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/dcast822/ewa_streaming_pipeline/ewa-streaming-sim/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:16:20.749626 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.08790704, "process_in_blocks": "0", "process_kernel_time": 0.158818, "process_mem_max_rss": "119107584", "process_out_blocks": "0", "process_user_time": 1.003286}
+[0m20:16:20.750333 [debug] [MainThread]: Command `dbt test` failed at 20:16:20.750048 after 0.09 seconds
+[0m20:16:20.750699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f2a950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f9df990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fac3fd0>]}
+[0m20:16:20.751031 [debug] [MainThread]: Flushing usage events
+[0m20:16:20.860996 [debug] [MainThread]: An error was encountered while trying to flush usage events

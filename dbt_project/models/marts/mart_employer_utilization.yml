@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: mart_employer_utilization
+    description: Total earned wages vs. approved advances by employer for employees' current pay period, with utilization rate as a percentage. Rolled up from mart_employee_balances.
+    columns:
+      - name: employer_id
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_employers')
+              field: employer_id
+      - name: total_earned_wages
+        data_tests:
+          - not_null
+      - name: total_advances
+        data_tests:
+          - not_null

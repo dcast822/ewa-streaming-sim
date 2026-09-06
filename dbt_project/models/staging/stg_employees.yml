@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_employees
+    description: Synthetic employee roster with per-employee pay period and earnings cap, loaded from a seed file.
+    columns:
+      - name: employee_id
+        data_tests:
+          - unique
+          - not_null
+      - name: employer_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_employers')
+              field: employer_id
+      - name: max_earnings
+        data_tests:
+          - not_null
+      - name: pay_period_start
+        data_tests:
+          - not_null

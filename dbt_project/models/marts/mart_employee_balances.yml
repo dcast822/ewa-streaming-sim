@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: mart_employee_balances
+    description: Current pay-period earned wage balance per employee — confirmed transaction earnings minus approved advance disbursements, scoped to the employee's active pay period.
+    columns:
+      - name: employee_id
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_employees')
+              field: employee_id
+      - name: employer_id
+        data_tests:
+          - not_null
+      - name: period_number
+        data_tests:
+          - not_null
+      - name: pay_period_start_date
+        data_tests:
+          - not_null
+      - name: pay_period_end_date
+        data_tests:
+          - not_null
+      - name: max_earnings
+        data_tests:
+          - not_null
+      - name: total_confirmed_earnings
+        data_tests:
+          - not_null
+      - name: total_approved_advances
+        data_tests:
+          - not_null
+      - name: current_balance
+        data_tests:
+          - not_null
