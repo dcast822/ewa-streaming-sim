@@ -6,7 +6,7 @@ A real-time Earned Wage Access (EWA) pipeline simulation — synthetic payroll t
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-name.streamlit.app)
 
-![EWA Dashboard](docs/dashboard-screenshot.png)
+![EWA Dashboard](docs/dash_screenshot_1.png)
 
 ---
 
