@@ -12,27 +12,9 @@ A real-time Earned Wage Access (EWA) pipeline simulation — synthetic payroll t
 
 ## Architecture
 
-```
-Producer (Python/Faker)
-      │
-      ▼
-Redpanda (Kafka-compatible broker)
-      │
-      ▼
-Consumer ──► DuckDB (raw_transactions, raw_advance_requests)
-                    │
-                    ▼
-              dbt (staging → intermediate → marts)
-                    │
-                    ▼
-              MotherDuck (cloud sync of mart tables)
-                    │
-                    ▼
-              Streamlit (live dashboard)
+![Architecture Diagram](docs/images/architecture-diagram.png)
 
-Orchestration: Dagster — schedules drain → dbt run → dbt test → MotherDuck sync
-               as one sequential job, every minute.
-```
+The dashed box shows the scope of the Dagster job — the consumer, dbt run/test, and MotherDuck sync execute as sequential steps within a single job, which is what avoids the DuckDB write-lock conflicts that a naive concurrent scheduler would hit.
 
 ## Tech Stack
 
